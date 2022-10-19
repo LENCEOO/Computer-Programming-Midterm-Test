@@ -1,4 +1,5 @@
-/*#include <iostream>
+// ìµœì†Œê³µë°°ìˆ˜ êµ¬í•˜ê¸°
+#include <iostream>
 using namespace std;
 
 int main()
@@ -6,7 +7,7 @@ int main()
 	int a, b, c;
 	int LCM, MUL;
 	
-	cout << "ÁÖÀÇ»çÇ× : a º¸´Ù b °¡ ´õ Ä¿¾ßÇÕ´Ï´Ù!" << endl;
+	cout << "ì£¼ì˜ì‚¬í•­ : a ë³´ë‹¤ b ê°€ ë” ì»¤ì•¼í•©ë‹ˆë‹¤!" << endl;
 	
 	cin >> a;
 	cin >> b;
@@ -25,4 +26,4 @@ int main()
 	cout << LCM;
 
 	return 0;
-}*/
+}
