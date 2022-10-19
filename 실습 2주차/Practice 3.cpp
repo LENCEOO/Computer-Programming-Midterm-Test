@@ -1,4 +1,5 @@
-/*#include <iostream>
+// 최대공약수 구하는 문제
+#include <iostream>
 using namespace std;
 
 int main()
@@ -32,4 +33,4 @@ int main()
 		cout << 1;
 
 	return 0;
-}*/
+}
