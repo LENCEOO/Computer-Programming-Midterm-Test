@@ -1,3 +1,4 @@
+// ì†Œìˆ˜ì˜ íŒë³„
 #include <iostream>
 using namespace std;
 
@@ -6,7 +7,7 @@ int main()
 	int num, i;
 	int cnt = 0;
 	
-	cout << "ÁÖÀÇ»çÇ× : ¼ıÀÚ°¡ 3 ÀÌ»óÀÌ¾î¾ß ÇÕ´Ï´Ù." << endl;
+	cout << "ì£¼ì˜ì‚¬í•­ : ìˆ«ìê°€ 3 ì´ìƒì´ì–´ì•¼ í•©ë‹ˆë‹¤." << endl;
 	cin >> num;
 
 	for (i = 2; i < num; i++) {
