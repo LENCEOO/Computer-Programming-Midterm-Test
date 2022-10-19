@@ -1,98 +1,98 @@
-//#include <stdio.h>
-//#include <iostream>
-//using namespace std;
-//
-//// ¹®Á¦ 2 : 3x3 Çà·ÄÀ» Ç¥ÇöÇÏ´Â struct Matrix 3x3
-//typedef struct Matrix3x3 {
-//	int matrix[3][3];
-//	
-//	void setMatrix(int mat[3][3]) {
-//		for (int i = 0; i < 3; i++) {
-//			for (int j = 0; j < 3; j++) {
-//				matrix[i][j] = mat[i][j];
-//			}
-//		}
-//	}
-//	// ¹®Á¦ 3 : ÇöÀç °ªµéÀ» Ãâ·ÂÇÏ´Â ¸â¹ö ÇÔ¼ö
-//	void printMatrix() {
-//		for (int i = 0; i < 3; i++) {
-//			for (int j = 0; j < 3; j++) {
-//				cout << matrix[i][j] << " ";
-//			}
-//			cout << endl;
-//		}
-//	}
-//	// ¹®Á¦ 4 : Æ¯Á¤¿ä¼Ò¿¡ Á¢±ÙÇÒ ¼ö ÀÖ´Â ÇÔ¼ö
-//	void at(int i, int j) {
-//		cout << matrix[i][j] << endl;
-//	}
-//	// ¹®Á¦ 5 : µÎ °³ÀÇ ÀÎÀÚ·Î ¹Ş¾Æ Çà·ÄÀÇ µ¡¼À ±¸ÇöÇÏ´Â ÇÔ¼ö
-//	void add(int arr1[][3], int arr2[][3], int arr3[][3]) {
-//			for (int i = 0; i < 3; i++) {
-//				for (int j = 0; j < 3; j++) {
-//					arr3[i][j] = arr1[i][j] + arr2[i][j];
-//				}
-//			}
-//	}
-//	// ¹®Á¦ 6 : Çà·ÄÀÇ °ö¼ÀÀ» ±¸ÇöÇÏ´Â ÇÔ¼ö
-//	void mul(int arr1[][3], int arr2[][3], int arr3[][3]) {
-//		for (int i = 0; i < 2; i++)
-//		{
-//			for (int j = 0; j < 2; j++)
-//			{
-//				int cum = 0;
-//				for (int k = 0; k < 2; k++)
-//				{
-//					cum += arr1[i][k] * arr2[k][j];
-//				}
-//
-//				arr3[i][j] = cum;
-//			}
-//		}
-//	}
-//	// ¹®Á¦ 7 : Çà·ÄÀÇ ÆÇº°½ÄÀ» ±¸ÇÏ´Â ÇÔ¼ö
-//	int det(int arr[][3]) {
-//		int d = arr[0][0] * (arr[1][1] * arr[2][2] - arr[2][1] * arr[1][2])
-//			- arr[0][1] * (arr[1][0] * arr[2][2] - arr[1][2] * arr[2][0])
-//			+ arr[0][2] * (arr[1][0] * arr[2][1] - arr[1][1] * arr[2][0]);
-//		return d;
-//	}
-//	// ¹®Á¦ 8 : Çà·ÄÀÇ Trace¸¦ ¸®ÅÏÇÏ´Â ÇÔ¼ö
-//	int trace(int arr[][3]) {
-//		for (int i = 0; i < 2; i++) {
-//			for (int j = 0; j < 2; j++) {
-//				int sum = arr[i][j];
-//				
-//				return sum;
-//			}
-//		}
-//		
-//	}
-//} Mat;
-//
-//int main() {
-//	int matrix1[3][3] = { {1,2,3}
-//	,{4,5,6}
-//	,{7,8,9}
-//	};
-//	int matrix2[3][3] = { {1,0,0},
-//	{4,5,6},
-//	{7,8,9}
-//	};
-//	int matrix3[3][3];
-//	
-//	Mat a;
-//	a.setMatrix(matrix1);
-//	a.printMatrix();
-//	a.det(matrix1); // ¹®Á¦ 7 : A.det()À» ±¸ÇöÇÏ´Â ÇÔ¼ö
-//
-//	Mat b;
-//	b.setMatrix(matrix2);
-//
-//	Mat c;
-//	c.setMatrix(matrix3);
-//	// ¹®Á¦ 9 : (AB).Trace()¿Í (AB).Det()À» ±¸ÇöÇÏ´Â ÇÔ¼ö
-//	cout << c.det(matrix3) << endl;
-//	cout << c.trace(matrix3) << endl;
-//	return 0;
-//}
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+// ë¬¸ì œ 2 : 3x3 í–‰ë ¬ì„ í‘œí˜„í•˜ëŠ” struct Matrix 3x3
+typedef struct Matrix3x3 {
+	int matrix[3][3];
+	
+	void setMatrix(int mat[3][3]) {
+		for (int i = 0; i < 3; i++) {
+			for (int j = 0; j < 3; j++) {
+				matrix[i][j] = mat[i][j];
+			}
+		}
+	}
+	// ë¬¸ì œ 3 : í˜„ì¬ ê°’ë“¤ì„ ì¶œë ¥í•˜ëŠ” ë©¤ë²„ í•¨ìˆ˜
+	void printMatrix() {
+		for (int i = 0; i < 3; i++) {
+			for (int j = 0; j < 3; j++) {
+				cout << matrix[i][j] << " ";
+			}
+			cout << endl;
+		}
+	}
+	// ë¬¸ì œ 4 : íŠ¹ì •ìš”ì†Œì— ì ‘ê·¼í•  ìˆ˜ ìˆëŠ” í•¨ìˆ˜
+	void at(int i, int j) {
+		cout << matrix[i][j] << endl;
+	}
+	// ë¬¸ì œ 5 : ë‘ ê°œì˜ ì¸ìë¡œ ë°›ì•„ í–‰ë ¬ì˜ ë§ì…ˆ êµ¬í˜„í•˜ëŠ” í•¨ìˆ˜
+	void add(int arr1[][3], int arr2[][3], int arr3[][3]) {
+			for (int i = 0; i < 3; i++) {
+				for (int j = 0; j < 3; j++) {
+					arr3[i][j] = arr1[i][j] + arr2[i][j];
+				}
+			}
+	}
+	// ë¬¸ì œ 6 : í–‰ë ¬ì˜ ê³±ì…ˆì„ êµ¬í˜„í•˜ëŠ” í•¨ìˆ˜
+	void mul(int arr1[][3], int arr2[][3], int arr3[][3]) {
+		for (int i = 0; i < 2; i++)
+		{
+			for (int j = 0; j < 2; j++)
+			{
+				int cum = 0;
+				for (int k = 0; k < 2; k++)
+				{
+					cum += arr1[i][k] * arr2[k][j];
+				}
+
+				arr3[i][j] = cum;
+			}
+		}
+	}
+	// ë¬¸ì œ 7 : í–‰ë ¬ì˜ íŒë³„ì‹ì„ êµ¬í•˜ëŠ” í•¨ìˆ˜
+	int det(int arr[][3]) {
+		int d = arr[0][0] * (arr[1][1] * arr[2][2] - arr[2][1] * arr[1][2])
+			- arr[0][1] * (arr[1][0] * arr[2][2] - arr[1][2] * arr[2][0])
+			+ arr[0][2] * (arr[1][0] * arr[2][1] - arr[1][1] * arr[2][0]);
+		return d;
+	}
+	// ë¬¸ì œ 8 : í–‰ë ¬ì˜ Traceë¥¼ ë¦¬í„´í•˜ëŠ” í•¨ìˆ˜
+	int trace(int arr[][3]) {
+		for (int i = 0; i < 2; i++) {
+			for (int j = 0; j < 2; j++) {
+				int sum = arr[i][j];
+				
+				return sum;
+			}
+		}
+		
+	}
+} Mat;
+
+int main() {
+	int matrix1[3][3] = { {1,2,3}
+	,{4,5,6}
+	,{7,8,9}
+	};
+	int matrix2[3][3] = { {1,0,0},
+	{4,5,6},
+	{7,8,9}
+	};
+	int matrix3[3][3];
+	
+	Mat a;
+	a.setMatrix(matrix1);
+	a.printMatrix();
+	a.det(matrix1); // ë¬¸ì œ 7 : A.det()ì„ êµ¬í˜„í•˜ëŠ” í•¨ìˆ˜
+
+	Mat b;
+	b.setMatrix(matrix2);
+
+	Mat c;
+	c.setMatrix(matrix3);
+	// ë¬¸ì œ 9 : (AB).Trace()ì™€ (AB).Det()ì„ êµ¬í˜„í•˜ëŠ” í•¨ìˆ˜
+	cout << c.det(matrix3) << endl;
+	cout << c.trace(matrix3) << endl;
+	return 0;
+}
