@@ -1,4 +1,4 @@
-/*#include <iostream>
+#include <iostream>
 using namespace std;
 
 int main()
@@ -6,17 +6,17 @@ int main()
 	int money;
 	int candy_price;
 
-	cout << "ÇöÀç °¡Áö°í ÀÖ´Â µ·: ";
+	cout << "í˜„ì¬ ê°€ì§€ê³  ìˆëŠ” ëˆ: ";
 	cin >> money;
-	cout << "ÄµµğÀÇ °¡°İ: ";
+	cout << "ìº”ë””ì˜ ê°€ê²©: ";
 	cin >> candy_price;
 
-	//ÃÖ´ëÇÑ »ì¼ö ÀÖ´Â »çÅÁ ¼ö
+	//ìµœëŒ€í•œ ì‚´ìˆ˜ ìˆëŠ” ì‚¬íƒ• ìˆ˜
 	int n_candies = money / candy_price;
-	cout << "ÃÖ´ë·Î »ì ¼ö ÀÖ´Â ÄµµğÀÇ °³¼ö = " << n_candies << endl;
+	cout << "ìµœëŒ€ë¡œ ì‚´ ìˆ˜ ìˆëŠ” ìº”ë””ì˜ ê°œìˆ˜ = " << n_candies << endl;
 
-	//»çÅÁÀ» ±¸ÀÔÇÏ°í ³²Àº µ·
+	//ì‚¬íƒ•ì„ êµ¬ì…í•˜ê³  ë‚¨ì€ ëˆ
 	int change = money % candy_price;
-	cout << "Äµµğ ±¸ÀÔ ÈÄ ³²Àº µ· = " << change << endl;
+	cout << "ìº”ë”” êµ¬ì… í›„ ë‚¨ì€ ëˆ = " << change << endl;
 	return 0;
-}*/
+}
